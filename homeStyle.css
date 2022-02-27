@@ -1,0 +1,113 @@
+/* Fonts Imported */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
+
+/* ************************
+    Veriables Declaration
+************************ */
+:root {
+    --red: #e50914;
+    --white: rgb(245, 237, 237);
+}
+
+
+
+/* *************************
+    PAGE LAYOUT
+************************* */
+
+body {
+    margin: 0px;
+    width: 100%;
+    color: var(--white);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* **********************
+        Section 1
+********************** */
+#block-1 {
+    background-image:   linear-gradient(rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.76)),
+                        url(Media/Home/img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  
+}
+
+
+/* **** Netflix logo Design **** */
+.svg-icon-netflix-logo {
+    width: 8.375rem;
+    height: 2.25rem;
+    fill: var(--red);
+    line-height: normal;
+}
+
+#header {
+    
+    padding: 2em ;
+}
+#signIn {
+    background-color: var(--red);
+    border: 0px solid var(--red);
+    border-radius: 0.3em;
+    color: var(--white);
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.5em 1.1em;
+
+}
+.Flex-Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* *************************
+    Main title section
+************************* */
+
+#title {
+    padding-bottom: 3em;
+
+}
+
+#title div {
+    margin: 2vh max(3vw, auto);
+    padding: 3em max(2em, auto);
+    text-align: center;
+}
+
+#title div h1 {
+    font-size: 3.5em;
+    line-height: 1em;
+
+}
+#email-lookup {
+    margin: 3em minmax(2em, auto);
+
+}
+#email-lookup form div {
+    display: flex;
+    justify-content:center;
+
+}
+
+#email-lookup form div input[type="email"] {
+    border: 0px;
+    padding: ;
+    font-size: 1rem;
+}
+
+#email-lookup form div button {
+    border: 0px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 200;
+    padding-left: 1em;
+}
+#email-lookup form div button:hover {
+    cursor: pointer;
+    background-color: #ff000d;
+}
