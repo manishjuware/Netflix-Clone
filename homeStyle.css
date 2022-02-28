@@ -6,7 +6,8 @@
 ************************ */
 :root {
     --red: #e50914;
-    --white: rgb(245, 237, 237);
+    --white: white;
+    --faq-background: #303030;
 }
 
 
@@ -14,13 +15,35 @@
 /* *************************
     PAGE LAYOUT
 ************************* */
-
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0px;
     width: 100%;
     color: var(--white);
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Arial, sans-serif;
+    /* font-family: 'Nunito Sans', sans-serif; */
 }
+
+/* ******For Jumbotron***** */
+.block-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em;
+}
+
+
+/* ******Background******* */
+.black {
+    background-color: black;
+    border-bottom: 00.5em solid #222;
+}
+
+
+
+
 
 /* **********************
         Section 1
@@ -30,8 +53,14 @@ body {
                         url(Media/Home/img/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    border-bottom: 00.5em solid #222;
     
   
+}
+
+/* for padding above main title */
+.gap {
+    padding: 4rem;
 }
 
 
@@ -66,7 +95,21 @@ body {
 /* *************************
     Main title section
 ************************* */
-
+/*  FONTS : Headings   */
+#title h1 {
+    margin-top: 0em;
+    font-size: 3.5em;
+    line-height: 1em;
+    padding: 0em max(2em, 10%);
+}
+#title h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+#title h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
 #title {
     padding-bottom: 3em;
 
@@ -78,13 +121,10 @@ body {
     text-align: center;
 }
 
-#title div h1 {
-    font-size: 3.5em;
-    line-height: 1em;
 
-}
 #email-lookup {
-    margin: 3em minmax(2em, auto);
+    margin: 3em max(2em, auto);
+    margin-bottom: 5em;
 
 }
 #email-lookup form div {
@@ -95,19 +135,183 @@ body {
 
 #email-lookup form div input[type="email"] {
     border: 0px;
-    padding: ;
+    padding: 1em 2em;
+    padding-right: 8em;
     font-size: 1rem;
+
 }
 
 #email-lookup form div button {
     border: 0px;
     background-color: var(--red);
     color: var(--white);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 200;
     padding-left: 1em;
 }
 #email-lookup form div button:hover {
     cursor: pointer;
     background-color: #ff000d;
+}
+
+
+
+/*****************************************
+    Jumbotron - More info about Netflix
+*****************************************/
+.block-container h1 {
+    font-size: 3rem;
+    color: var(--white);
+}
+.block-container h2 {
+    font-weight: 500;
+}
+.thumbnail {
+    width: 100%;
+    
+}
+
+.thumbnail video {
+
+    position: absolute;
+    z-index: 0;
+}
+.thumbnail img{
+    z-index: 2;
+    position: relative;
+    max-width: 100%;
+    min-width: 50%;
+}
+/* #block-3{
+    flex-direction: row-reverse;
+} */
+
+/* *********************
+    FAQs List
+********************* */
+#faq {
+    text-align: center;
+    width: 100%;
+    padding: 3em;
+    padding-left: 1em;
+}
+#faq h1 {
+    margin-top: 0em;
+    padding: 1em;
+    font-size: 3rem;
+}
+
+#faq ul li{
+    width: 100%;
+    list-style: none;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color:var(--faq-background);
+    margin-bottom: 0.5em;
+    
+}
+.faq-button button {
+    border: 0px;
+    display: block;
+    background-color:transparent;
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: left;
+
+    cursor: pointer;
+}
+.faq-button img {
+    filter: invert(1);
+    width: 1.5em;
+    height: 1.5em;
+
+}
+.faq-ans {
+    background-color: var(--faq-background);
+    padding: 0.5em;
+    font-size: 1.5rem;
+    margin-top: -0.2em;
+    margin-bottom: .5em;
+    text-align: left;
+    display: none;
+}
+.faq-button:hover {
+    cursor: pointer;
+}
+.open {
+    display: block;
+}
+
+/* ***************************
+    Home Page Footer
+*************************** */
+#footer {
+    border-top: 0.5em solid #222;
+    margin-top: -1em;
+    padding: 3em;
+}
+#footer div{
+    padding: 2em auto;
+    color: rgb(173, 173, 173);
+}
+#footer div p a{
+    text-decoration: none;
+    color: rgb(173, 173, 173);
+}
+#footer div p {
+    padding: 2em 0em;
+    padding-left: 3em;
+    font-size: .8rem;
+}
+.footer-container li {
+    display: block;
+}
+.footer-container {
+    font-size: .8rem;
+    list-style: none;
+    list-style-position: inside;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    justify-content: center;
+    grid-gap: 1em;
+}
+
+
+@media only screen and (max-width: 950px) {
+    
+    #email-lookup form div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #email-lookup form div button {
+        margin-top: 1em;
+        align-self: center;
+        font-size: 1rem;
+        width: 10em;
+    }
+    
+    .block-container {
+        padding-left: 5em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    html {
+        font-size: 8px;
+    }
+    #email-lookup h3 {
+        padding-left: 3rem;
+    }
+    #title h1 {
+        padding: 1em;
+        padding-bottom: 0.5em;
+    }
+
 }
