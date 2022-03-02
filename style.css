@@ -13,7 +13,7 @@
 
 
 /* *************************
-    PAGE LAYOUT
+    HOME PAGE LAYOUT
 ************************* */
 * {
     box-sizing: border-box;
@@ -44,8 +44,45 @@ body {
     border-bottom: 00.5em solid #222;
 }
 
+/* ****************************************
+        SIGNIN & SIGNUP PAGE LAYOUT
+**************************************** */
+#block {
+    background-color: rgba(0, 0, 0, 0.671);
+    padding: 5em;
+    width: 50%;
+    margin: 5em auto;
+    border-radius: .5em;
+    text-align: center;
+}
+.form-container input {
+    border: 0em;
+}
+.form-container input,
+.form-container button{
+    padding: 1em;
+    margin: 1em;
+}
+#signIn a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 1.5em;
+}
 
-
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.form-container p {
+    color: rgb(196, 196, 196);
+    font-weight: 100;
+}
+.form-container p a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+}
 
 
 /* **********************
@@ -76,7 +113,6 @@ body {
 }
 
 #header {
-    
     padding: 2em ;
 }
 #signIn {
@@ -87,6 +123,7 @@ body {
     font-size: 1em;
     font-weight: 500;
     padding: 0.5em 1.1em;
+    cursor: pointer;
 
 }
 .Flex-Container {
@@ -126,7 +163,7 @@ body {
 
 
 #email-lookup {
-    margin: 3em max(2em, auto);
+    margin: 3em auto;
     margin-bottom: 5em;
 
 }
@@ -139,7 +176,7 @@ body {
 #email-lookup form div input[type="email"] {
     border: 0px;
     padding: 1em 2em;
-    padding-right: 8em;
+    width: 30%;
     font-size: 1rem;
 
 }
@@ -151,6 +188,10 @@ body {
     font-size: 1.5rem;
     font-weight: 200;
     padding-left: 1em;
+}
+#email-lookup form div button a {
+    text-decoration: none;
+    color: var(--white);
 }
 #email-lookup form div button:hover {
     cursor: pointer;
@@ -307,11 +348,15 @@ body {
         align-items: center;
         justify-content: center;
     }
+    #email-lookup form div input[type="email"] {
+        width: 70%;
+    }
     #email-lookup form div button {
         margin-top: 1em;
         align-self: center;
         font-size: 1rem;
         width: 10em;
+        border-radius: .25em;
     }
     
     .block-container {
@@ -333,9 +378,24 @@ body {
         width: 80%;
         margin: auto;
     }
+
     .footer-container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* ********************
+        Signin/Signup page
+    ******************** */
+    #block {
+        width: 70%;
+        font-size: 1em;
+    }
+    .form-container input,
+    .form-container button{
+        padding: 1em;
+        margin: .5em;
+    }
+
 }
 
 @media only screen and (max-width: 550px) {
@@ -355,6 +415,19 @@ body {
     }
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    /* ********************
+        Signin/Signup page
+    ******************** */
+    #block {
+        width: 90%;
+    }
+    .form-container input,
+    .form-container button{
+        padding: .5em;
+        margin: .5em;
     }
 
 }
