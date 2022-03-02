@@ -34,8 +34,11 @@ body {
     padding: 3em;
 }
 
-
-/* ******Background******* */
+.width80 {
+    width: 80%;
+    text-align: center;
+}
+/* Background */
 .black {
     background-color: black;
     border-bottom: 00.5em solid #222;
@@ -100,7 +103,7 @@ body {
     margin-top: 0em;
     font-size: 3.5em;
     line-height: 1em;
-    padding: 0em max(2em, 10%);
+    padding: 0em max(4em, 15%);
 }
 #title h2 {
     font-size: 2rem;
@@ -167,24 +170,28 @@ body {
     font-weight: 500;
 }
 .thumbnail {
-    width: 100%;
-    
+    width: 80%;
+    margin: auto;
+
+}
+.discription {
+    width: 80%;
+    margin: auto;
 }
 
-.thumbnail video {
-
-    position: absolute;
-    z-index: 0;
-}
 .thumbnail img{
-    z-index: 2;
-    position: relative;
     max-width: 100%;
     min-width: 50%;
 }
-/* #block-3{
+#block-3 {
     flex-direction: row-reverse;
-} */
+}
+.odd-block {
+    margin-right: 3em;
+}
+.even-block {
+    margin-left: 3em;
+}
 
 /* *********************
     FAQs List
@@ -199,6 +206,10 @@ body {
     margin-top: 0em;
     padding: 1em;
     font-size: 3rem;
+}
+#faq ul {
+    width: 70%;
+    margin: auto;
 }
 
 #faq ul li{
@@ -219,7 +230,6 @@ body {
     color: var(--white);
     font-size: 1.5rem;
     text-align: left;
-
     cursor: pointer;
 }
 .faq-button img {
@@ -239,9 +249,7 @@ body {
 }
 .faq-button:hover {
     cursor: pointer;
-}
-.open {
-    display: block;
+    
 }
 
 /* ***************************
@@ -268,6 +276,9 @@ body {
 .footer-container li {
     display: block;
 }
+.footer-container li span{
+    cursor: pointer;
+}
 .footer-container {
     font-size: .8rem;
     list-style: none;
@@ -280,9 +291,18 @@ body {
 }
 
 
+/* *****************************************
+        MEDIA QUERIES
+****************************************** */
+
 @media only screen and (max-width: 950px) {
     
+    #title h1 {
+        padding: 0em max(0.75em, 10%);
+    }
     #email-lookup form div {
+        width: 70%;
+        margin: auto;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -300,6 +320,22 @@ body {
         justify-content: center;
         align-items: center;
     }
+    .odd-block {
+        margin-right: auto;
+    }
+    .even-block {
+        margin-left: auto;
+    }
+    #block-3 {
+        flex-direction: column;
+    }
+    #faq ul {
+        width: 80%;
+        margin: auto;
+    }
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media only screen and (max-width: 550px) {
@@ -312,6 +348,13 @@ body {
     #title h1 {
         padding: 1em;
         padding-bottom: 0.5em;
+    }
+    #faq ul {
+        width: 90%;
+        margin: auto;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
