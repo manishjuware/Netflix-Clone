@@ -63,11 +63,6 @@ body {
     padding: 1em;
     margin: 1em;
 }
-#signIn a {
-    text-decoration: none;
-    color: var(--white);
-    padding: 1.5em;
-}
 
 .form-container {
     display: flex;
