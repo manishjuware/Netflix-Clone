@@ -1,0 +1,296 @@
+
+/* ************************
+    Veriables Declaration
+************************ */
+:root {
+    --red: #e50914;
+    --white: white;
+    --faint: rgb(209, 209, 209);
+    --background: black;
+}
+
+
+/* **************************
+    Browse Page Layout
+************************** */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+
+
+
+
+/* **************************
+    Header & Poster
+************************** */
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#category {
+    width: 30%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+#category button {
+    color: var(--white);
+    border-radius: .1em;
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+
+}
+#category button:hover {
+    transform: translateY(-.2em) ;
+    border-bottom: 1px solid var(--faint);
+}
+#movies-list {
+    border-bottom: 1px solid var(--faint);
+}
+/* Netflix Logo */
+.svg-icon-netflix-logo {
+    width: 8.375rem;
+    height: 2.25rem;
+    fill: var(--red);
+    line-height: normal;
+}
+/* Poster Background */
+#poster {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.5)),
+                        url(images/joker1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3em;
+
+}
+/* Featured Title & Subtitle */
+#title {
+    width: 50%;
+    margin-top: 8em ;
+}
+
+/* Play Button */
+.play {
+    background-color: var(--white);
+    font-size: 1rem;
+    font-weight: 300;
+    padding: .25em 2em;
+    text-align: center;
+    border: 0em;
+    border-radius: .25em;
+    cursor: pointer;
+}
+
+
+/* ********************************
+    Movies/Series slides Layout
+******************************** */
+#Movies, #Series {
+    background-color: var(--background);
+    padding: 2em;
+}
+.slide {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1em;
+    align-items: center;
+}
+#Movies h3, #Series h3 {
+    margin: 1em;
+    margin-left: 0em;
+}
+.slide img {
+    width: 100%;
+}
+#Movies {
+    display: block;
+}
+#Series {
+    display: none;
+}
+.slide img:hover {
+    transform: scale(1.2,1.2);
+    border-radius: .25em;
+
+}
+
+/* ***********************
+        Card Feature
+*********************** */
+.cf {
+    border-bottom: .25em solid #202020;
+}
+.card-feature {
+    background-color: var(--background);
+    width: 100%;
+}
+.card-feature div {
+    width: 100%;
+    display: flex;
+    margin: 1em 0em;
+}
+.card-feature div div {
+    display: block;
+}
+.card-feature div img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+/* Show/Hide Features */
+.card-feature #dram-1,
+.card-feature #dram-2,
+.card-feature #dram-3,
+.card-feature #dram-4,
+.card-feature #dram-5,
+.card-feature #thril-1,
+.card-feature #thril-2,
+.card-feature #thril-3,
+.card-feature #thril-4,
+.card-feature #thril-5,
+.card-feature #child-1,
+.card-feature #child-2,
+.card-feature #child-3,
+.card-feature #child-4,
+.card-feature #child-5,
+.card-feature #susp-1,
+.card-feature #susp-2,
+.card-feature #susp-3,
+.card-feature #susp-4,
+.card-feature #susp-5,
+.card-feature #rom-1,
+.card-feature #rom-2,
+.card-feature #rom-3,
+.card-feature #rom-4,
+.card-feature #rom-5,
+.card-feature #comedy-1,
+.card-feature #comedy-2,
+.card-feature #comedy-3,
+.card-feature #comedy-4,
+.card-feature #comedy-5,
+.card-feature #crime-1,
+.card-feature #crime-2,
+.card-feature #crime-3,
+.card-feature #crime-4,
+.card-feature #crime-5,
+.card-feature #childs-1,
+.card-feature #childs-2,
+.card-feature #childs-3,
+.card-feature #childs-4,
+.card-feature #childs-5,
+.card-feature #doc-1,
+.card-feature #doc-2,
+.card-feature #doc-3,
+.card-feature #doc-4,
+.card-feature #doc-5,
+.card-feature #fg-1,
+.card-feature #fg-2,
+.card-feature #fg-3,
+.card-feature #fg-4,
+.card-feature #fg-5 {
+    display: none;
+}
+
+#page {
+    
+}
+/* Video Player */
+#vidbox {
+    z-index: 0;
+    background-color:rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+#vidbox video {
+    width: 80%;
+    border: .5px solid white;
+    border-radius: .25em;
+    margin: 15vh 10vw;
+}
+#vid {
+    z-index: 1;
+    visibility: hidden;
+    width: 80%;
+    border: .5px solid white;
+    border-radius: .25em;
+    margin: 15vh 10vw;
+    position: fixed;
+    top: 35%;
+    left: 40%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* ***************
+     Footer 
+*************** */
+#footer {
+    background-color: var(--background);
+    padding: 2em;
+    color: var(--faint);
+}
+#footer p {
+    margin-top: 0em;
+    font-size: .8rem;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    font-size: .75rem;
+    list-style: none;
+}
+#footer a {
+    text-decoration: none;
+    color: var(--faint);
+}
+
+
+
+/* *****************************************
+        Media Queries (Responsiveness)
+***************************************** */
+@media only screen and (max-width: 950px) {
+    html {
+        font-size: 12px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width : 550px) {
+    html {
+        font-size: 8px;
+    }
+    .card-feature div img {
+        max-width: 55%;
+        max-height: 55%;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,8 +1,7 @@
 let ques = document.getElementsByClassName('faq-button');
-let ans = document.getElementsByClassName('faq-ans')
+let ans = document.getElementsByClassName('faq-ans');
 
 for (let index = 0; index < ques.length; index++) {
-
     
     ques[index].addEventListener('click' , () => {
         if (ans[index].style.display === "none") {
